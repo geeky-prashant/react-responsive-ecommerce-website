@@ -2,34 +2,12 @@ import { useEffect, useContext } from "react";
 import "./Home.scss";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
-import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 import Products from "./../Products/Products";
 
 const Home = () => {
   const { categories, setCategories, products, setProducts } =
     useContext(Context);
-
-  useEffect(() => {
-    getCategories();
-    getProducts();
-  }, []);
-
-  const getCategories = () => {
-    fetchDataFromApi("/api/categories?populate=*").then((res) => {
-      console.log(res);
-      setCategories(res);
-    });
-  };
-
-  const getProducts = () => {
-    fetchDataFromApi(
-      "/api/products?populate=*&pagination[start]=0&pagination[limit]=8"
-    ).then((res) => {
-      console.log(res);
-      setProducts(res);
-    });
-  };
 
   return (
     <div>
