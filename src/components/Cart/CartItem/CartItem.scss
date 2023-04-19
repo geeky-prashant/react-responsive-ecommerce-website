@@ -1,5 +1,6 @@
 .cart-products {
   flex-grow: 1;
+  overflow-y: scroll;
   .cart-product {
     padding: 20px 15px;
     display: flex;
@@ -43,7 +44,7 @@
       }
       svg {
         position: absolute;
-        top: 0;
+        top: 4px;
         right: 0;
         cursor: pointer;
       }

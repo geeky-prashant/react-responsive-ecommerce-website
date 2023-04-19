@@ -1,23 +1,15 @@
-import Product from "../../Products/Product/Product";
-import Pdata from "../../Products/Pdata";
-import "./RelatedProducts.scss";
+import React from "react";
+import useFetch from "../../../hooks/useFetch";
+import Products from "../../Products/Products";
 
-const RelatedProducts = () => {
+const RelatedProducts = ({ categoryId, productId }) => {
+  const { data } = useFetch(
+    `/api/products?populate=*&filters[id][$ne]=${productId}&filters[categories][id]=${categoryId}&pagination[start]=0&pagination[limit]=4`
+  );
+
   return (
     <div className="related-products">
-      <div className="products-container">
-        <div className="sec-heading">RELATED PRODUCTS</div>
-        <div className="products">
-          {Pdata.slice(8, 12).map((product) => (
-            <Product
-              id={product.id}
-              imgsrc={product.imgsrc}
-              pname={product.pname}
-              price={product.price}
-            />
-          ))}
-        </div>
-      </div>
+      <Products headingText="Related Products" products={data} />
     </div>
   );
 };

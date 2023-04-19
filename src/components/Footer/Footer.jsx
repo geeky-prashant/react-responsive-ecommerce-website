@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="col">
           <div className="title">About</div>
           <div className="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dolor
-            similique facere totam dolores sit incidunt, delectus laboriosam!
-            Ad, recusandae rerum. Omnis fugit sint eos?
+            Sneakers is an Indian multinational corporation that is engaged in
+            the design, development, manufacturing, and worldwide marketing and
+            sales of footwear, apparel, equipment, accessories, and services.
           </div>
         </div>
         <div className="col">
@@ -26,24 +26,18 @@ const Footer = () => {
           </div>
           <div className="c-item">
             <FaEnvelope />
-            <div className="text">Email: geekyprashant@gmail.com</div>
+            <div className="text">Email: geekyprashant840@gmail.com</div>
           </div>
         </div>
         <div className="col">
-          <div className="title">Shoes</div>
-          <span className="text">All Shoes</span>
-          <span className="text">Custom Shoes</span>
-          <span className="text">Jordan Shoes</span>
-          <span className="text">Running Shoes</span>
-          <span className="text">Football Shoes</span>
-          <span className="text">Basketball Shoes</span>
-          <span className="text">Lifestyle Shoes</span>
+          <div className="title">Sneakers</div>
+          <span className="text">Featured Sneakers</span>
+          <span className="text">Sneakers for Men</span>
+          <span className="text">Sneakers for Women</span>
+          <span className="text">Sneakers for Kids</span>
         </div>
         <div className="col">
-          <div className="title">Pages</div>
-          <span className="text">Home</span>
-          <span className="text">About</span>
-          <span className="text">Returns</span>
+          <div className="title">Need Help</div>
           <span className="text">Contact Us</span>
           <span className="text">Privacy Policy</span>
           <span className="text">Terms & Conditions</span>

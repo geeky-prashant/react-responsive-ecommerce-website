@@ -120,6 +120,9 @@
             @include md {
               flex-grow: unset;
             }
+            &:hover {
+              background-color: #025f43;
+            }
           }
         }
         .divider {
