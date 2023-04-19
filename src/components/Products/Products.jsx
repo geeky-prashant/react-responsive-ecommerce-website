@@ -1,20 +1,20 @@
 import "./Products.scss";
 import Product from "./Product/Product";
-import Pdata from "../Products/Pdata";
+import Pdata from "./Pdata";
 
 const Products = ({ innerPage, headingText }) => {
   return (
     <div className="products-container">
       {!innerPage && <div className="sec-heading">{headingText}</div>}
-      <div>
-        {Pdata.map((item) => {
+      <div className="products">
+        {Pdata.map((product) => (
           <Product
-            id={item.id}
-            imgsrc={item.imgsrc}
-            pname={item.pname}
-            price={item.price}
-          />;
-        })}
+            id={product.id}
+            imgsrc={product.imgsrc}
+            pname={product.pname}
+            price={product.price}
+          />
+        ))}
       </div>
     </div>
   );

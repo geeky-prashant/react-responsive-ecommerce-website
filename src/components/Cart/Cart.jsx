@@ -28,7 +28,7 @@ const Cart = ({ setShowCart }) => {
             <span>No products in the cart</span>
             <button
               onClick={() => {
-                navigate("/category/1");
+                navigate("/category");
                 setShowCart(false);
               }}
               className="return-cta"

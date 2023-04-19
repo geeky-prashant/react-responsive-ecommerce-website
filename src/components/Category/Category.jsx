@@ -4,7 +4,7 @@ const Category = () => {
   return (
     <div className="category-main-content">
       <div className="layout">
-        <div className="category-title">Related Products</div>
+        <div className="category-title">Featured Sneakers</div>
         <Products innerPage={true} />
       </div>
     </div>

@@ -33,9 +33,19 @@ const SingleProduct = () => {
             <img src="/assets/products/jordan-1.png" />
           </div>
           <div className="right">
-            <span className="name">Title</span>
-            <span className="price">&#8377;2345</span>
-            <span className="desc">idhsxzuihfiduxiudsc</span>
+            <span className="name">Air Jordan 1 Mid SE</span>
+            <span className="price">&#8377;11,895.00</span>
+            <span className="desc">
+              This AJ1 is all about love. Self-love, love of the game, love for
+              life—whatever the L-word evokes for you, this foray into floral
+              footwear symbolises the passions that push you forwards. Want to
+              get in the weeds? Just open the box: special-edition packaging
+              names every flower in the bouquet, plus their hidden meanings. Or
+              you can tear past the paper and let the beauty of the blooms
+              gracing the collar and hangtag speak for themselves. Either way,
+              you (and the whole world) are going to fall in love with your
+              look.
+            </span>
 
             <div className="cart-buttons">
               <div className="quantity-buttons">

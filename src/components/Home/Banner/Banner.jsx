@@ -26,7 +26,7 @@ const Banner = () => {
               </a>
             </div>
             <div className="banner-cta v2">
-              <Link to="/category/1">Shop Now</Link>
+              <Link to="/category">Shop Now</Link>
             </div>
           </div>
         </div>

@@ -19,7 +19,24 @@ const Search = ({ setShowSearch }) => {
               <span className="desc">Product Description</span>
             </div>
           </div>
-          ;
+          <div className="search-result-item">
+            <div className="img-container">
+              <img src="/assets/products/jordan-1.png" alt="" />
+            </div>
+            <div className="prod-details">
+              <span className="name">Product Name</span>
+              <span className="desc">Product Description</span>
+            </div>
+          </div>
+          <div className="search-result-item">
+            <div className="img-container">
+              <img src="/assets/products/jordan-1.png" alt="" />
+            </div>
+            <div className="prod-details">
+              <span className="name">Product Name</span>
+              <span className="desc">Product Description</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

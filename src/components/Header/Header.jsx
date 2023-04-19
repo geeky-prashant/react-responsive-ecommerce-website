@@ -41,16 +41,16 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/category/1">Featured Sneakers</Link>
+              <Link to="/category">Featured Sneakers</Link>
             </li>
             <li>
-              <Link to="/category/2">Men</Link>
+              <Link to="/category">Men</Link>
             </li>
             <li>
-              <Link to="/category/3">Women</Link>
+              <Link to="/category">Women</Link>
             </li>
             <li>
-              <Link to="/category/4">Kids</Link>
+              <Link to="/category">Kids</Link>
             </li>
           </ul>
           <div className="right">
