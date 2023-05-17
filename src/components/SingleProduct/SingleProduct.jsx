@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { Context } from "../../utils/context";
+import { useState } from "react";
 import RelatedProducts from "./RelatedProducts/RelatedProducts";
 import {
   FaFacebookF,
@@ -10,31 +9,35 @@ import {
   FaCartPlus,
 } from "react-icons/fa";
 import "./SingleProduct.scss";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import Pdata from "../Products/Pdata";
 
 const SingleProduct = () => {
-  const [quantity, setQuantity] = useState(1);
-  const { handleAddToCart } = useContext(Context);
-  const increment = () => {
-    setQuantity((prevState) => prevState + 1);
-  };
+  const { id } = useParams();
+  const [data, setData] = useState({});
 
-  const decrement = () => {
-    setQuantity((prevState) => {
-      if (prevState === 1) return 1;
-      return prevState - 1;
-    });
-  };
+  useEffect(() => {
+    if (id) {
+      const selectedData = Pdata.filter((item) => {
+        return item.id === Number.parseInt(id);
+      });
+      setData(selectedData[0]);
+    }
+  }, [id]);
+
+  useEffect(() => {}, [data]);
 
   return (
     <div className="single-product-main-content">
       <div className="layout">
         <div className="single-product-page">
           <div className="left">
-            <img src="/assets/products/jordan-1.png" />
+            <img src={data?.imgsrc} alt="" />
           </div>
           <div className="right">
-            <span className="name">Air Jordan 1 Mid SE</span>
-            <span className="price">&#8377;11,895.00</span>
+            <span className="name">{data.pname}</span>
+            <span className="price">&#8377;{data.price}</span>
             <span className="desc">
               This AJ1 is all about love. Self-love, love of the game, love for
               life—whatever the L-word evokes for you, this foray into floral
@@ -49,9 +52,9 @@ const SingleProduct = () => {
 
             <div className="cart-buttons">
               <div className="quantity-buttons">
-                <span onClick={decrement}>-</span>
-                <span>{quantity}</span>
-                <span onClick={increment}>+</span>
+                <span>-</span>
+                <span>5</span>
+                <span>+</span>
               </div>
               <button className="add-to-cart-button">
                 <FaCartPlus size={20} />

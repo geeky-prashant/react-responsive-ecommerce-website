@@ -2,9 +2,10 @@ import "./Product.scss";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
+  console.log(props);
   return (
     <div className="product-card">
-      <Link to="/product">
+      <Link to={`/product/${props.id}`}>
         <div className="thumbnail">
           <img src={props.imgsrc} alt="" />
         </div>

@@ -1,4 +1,3 @@
-import { useEffect, useContext } from "react";
 import "./Home.scss";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
